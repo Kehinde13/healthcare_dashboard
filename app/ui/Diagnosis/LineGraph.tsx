@@ -2,12 +2,15 @@ import React, { useEffect } from "react";
 import {
   ChartConfig,
   ChartContainer,
+  ChartLegend,
+  ChartLegendContent,
   ChartTooltip,
   ChartTooltipContent,
 } from "../Shadcn/chart";
 import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts";
 import { ChartData } from "@/lib/definition";
 import { ArrowDown } from "lucide-react";
+import CustomLegend from "./CustomLegend";
 
 const LineGraph = ({ chartData }: { chartData: ChartData[] }) => {
   const chartConfig = {
@@ -26,12 +29,12 @@ const LineGraph = ({ chartData }: { chartData: ChartData[] }) => {
   }, [chartData]);
 
   return (
-    <div className="mb-5 p-2 rounded-md bg-[#F4F0FE]">
-      <div className="flex justify-between">
-        <h1 className="font-bold text-xl">Blood Pressure</h1>
-        <div className="flex justify-between">
-          <p>last 6 months</p>
-          <ArrowDown />
+    <div className="mb-5 p-2 rounded-md bg-[#F4F0FE] min-h-max">
+      <div className="flex justify-between mb-5">
+        <h1 className="font-bold md:text-xl text-sm">Blood Pressure</h1>
+        <div className="flex justify-between text-xs md:text-base">
+          <p className="self-center">last 6 months</p>
+          <ArrowDown className="h-4 w-4 self-center"/>
         </div>
       </div>
 
@@ -40,20 +43,27 @@ const LineGraph = ({ chartData }: { chartData: ChartData[] }) => {
           accessibilityLayer
           data={chartData}
           margin={{
-            left: 12,
+            left: -20,
             right: 12,
           }}
         >
-          <CartesianGrid vertical={false} />
+          <CartesianGrid vertical={false} stroke="#E0E0E0" strokeWidth={2} />
 
           <XAxis
             dataKey="month"
             tickLine={true}
             axisLine={true}
-            tickMargin={12}
+            tickMargin={6}
             tickFormatter={(value) => value.slice(0, 3)}
           />
+          <YAxis tickCount={6} />
           <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
+          <ChartLegend
+            layout="vertical"
+            align="right"
+            verticalAlign="top"
+            content={<CustomLegend />}
+          />
           <Line
             dataKey="systolic"
             type="monotone"

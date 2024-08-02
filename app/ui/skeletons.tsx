@@ -73,7 +73,7 @@ export function Card() {
     return (
         <div className='bg-[#F6F7F8] p-5 rounded-md md:w-[33.3%]'>
         <div
-        className='w-20 h-20 mb-3 rounded full'
+        className='w-20 h-20 mb-3 rounded-full'
         />
 
         <div>
@@ -90,7 +90,7 @@ export function DiagnosisSkeleton() {
         <div>
             <div className="w-full mb-5 h-64 bg-[#F6F7F8] animate-pulse"></div>
 
-            <div className="w-full flex justify-between gap-5">
+            <div className="w-full flex flex-col md:flex-row justify-between gap-5">
                <Card />
                <Card />
                <Card />

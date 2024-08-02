@@ -32,8 +32,8 @@ const Cards = ({ diagnosisData } : {diagnosisData : Diagnosis[]}) => {
 
         <div>
             <h6 className='text-sm'>Temperature</h6>
-            <h1 className='text-xl font-bold'>{diagnosisData[0].temperature.value} &#176; F</h1>
-            <p className='text-xs mt-2'>{diagnosisData[0].temperature.levels}</p>
+            <h1 className='text-xl font-bold'>{diagnosisData[0]?.temperature.value} &#176; F</h1>
+            <p className='text-xs mt-2'>{diagnosisData[0]?.temperature.levels}</p>
         </div>
       </div>
 
@@ -46,9 +46,9 @@ const Cards = ({ diagnosisData } : {diagnosisData : Diagnosis[]}) => {
 
         <div>
             <h6 className='text-sm'>Heart Rate</h6>
-            <h1 className='text-xl font-bold'>{diagnosisData[0].heart_rate.value} bpm</h1>
+            <h1 className='text-xl font-bold'>{diagnosisData[0]?.heart_rate.value} bpm</h1>
             <p className='text-xs mt-2'>
-              {diagnosisData[0].heart_rate.levels}
+              {diagnosisData[0]?.heart_rate.levels}
             </p>
         </div>
       </div>
