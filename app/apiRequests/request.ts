@@ -1,11 +1,15 @@
+require('dotenv').config();
+
 
 
 const allUsers = async () => {
+
     try {
     const url = "https://fedskillstest.coalitiontechnologies.workers.dev";
-    const username = "coalition";
-    const password = "skills-test";
+    const username = process.env.NEXT_PUBLIC_DB_USER;
+    const password = process.env.NEXT_PUBLIC_DB_PASS;
     const credentials = btoa(`${username}:${password}`);
+    
 
     console.log(`${username}:${password}`);
     

@@ -24,9 +24,6 @@ const LineGraph = ({ chartData }: { chartData: ChartData[] }) => {
     },
   } satisfies ChartConfig;
 
-  useEffect(() => {
-    console.log(chartData);
-  }, [chartData]);
 
   return (
     <div className="mb-5 p-2 rounded-md bg-[#F4F0FE] min-h-max">

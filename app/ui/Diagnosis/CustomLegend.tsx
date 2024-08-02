@@ -3,7 +3,7 @@ import React from "react";
 
 const CustomLegend = () => {
   return (
-    <div className="hidden md:flex flex-col mx-24 p-3 gap-3">
+    <div className="hidden md:flex flex-col mx-5 p-3 gap-3">
       <div className="flex gap-2">
         <div
           style={{
