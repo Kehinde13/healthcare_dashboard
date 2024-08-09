@@ -53,7 +53,7 @@ const LineGraph = ({ chartData }: { chartData: ChartData[] }) => {
             tickMargin={6}
             tickFormatter={(value) => value.slice(0, 3)}
           />
-          <YAxis tickCount={6} />
+          <YAxis tickCount={5} />
           <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
           <ChartLegend
             layout="vertical"

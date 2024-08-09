@@ -44,7 +44,7 @@ const Diagnosis = () => {
         );
       }
     }
-  }, [jessica, diagnosis]);
+  }, [jessica]);
 
   
   return (

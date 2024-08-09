@@ -1,7 +1,3 @@
-require('dotenv').config();
-
-
-
 const allUsers = async () => {
 
     try {
@@ -9,9 +5,6 @@ const allUsers = async () => {
     const username = process.env.NEXT_PUBLIC_DB_USER;
     const password = process.env.NEXT_PUBLIC_DB_PASS;
     const credentials = btoa(`${username}:${password}`);
-    
-
-    console.log(`${username}:${password}`);
     
   
     const response = await fetch(url, {
