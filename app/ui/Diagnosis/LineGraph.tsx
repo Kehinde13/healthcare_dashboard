@@ -1,9 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   ChartConfig,
   ChartContainer,
   ChartLegend,
-  ChartLegendContent,
   ChartTooltip,
   ChartTooltipContent,
 } from "../Shadcn/chart";
