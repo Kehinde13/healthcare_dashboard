@@ -11,14 +11,6 @@ const Diagnosis = () => {
   const [chartData, setChartData] = useState<ChartData[]>([]);
   const [diagnosis, setDiagnosis] = useState<DiagnosisType[]>([])
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await getUserAtIndex();
-      setJessica(res);
-    };
-    fetchData();
-  }, []);
-
   const isHealthRecordArray = (arr: any[]): arr is HealthRecord[] => {
     return arr.every(
       (item) => "month" in item && "year" in item && "blood_pressure" in item
@@ -26,7 +18,13 @@ const Diagnosis = () => {
   };
 
   useEffect(() => {
-    if (jessica?.diagnosis_history.length) {
+    const fetchData = async () => {
+      const res = await getUserAtIndex();
+      setJessica(res);
+    };
+    fetchData();
+
+    if (jessica?.diagnosis_history?.length) {
       const latestData = jessica.diagnosis_history.slice(0, 6);
       setDiagnosis(jessica.diagnosis_history.slice(0, 1))
        

@@ -25,7 +25,7 @@ const LineGraph = ({ chartData }: { chartData: ChartData[] }) => {
 
 
   return (
-    <div className="mb-5 p-2 rounded-md bg-[#F4F0FE] min-h-max">
+    <div className="mb-5 p-2 rounded-md bg-[#F4F0FE] min-h-max" data-testid="line-graph">
       <div className="flex justify-between mb-5">
         <h1 className="font-bold md:text-xl text-sm">Blood Pressure</h1>
         <div className="flex justify-between text-xs md:text-base">

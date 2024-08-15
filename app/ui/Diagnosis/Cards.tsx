@@ -8,7 +8,7 @@ import { Diagnosis } from '@/lib/definition'
 const Cards = ({ diagnosisData } : {diagnosisData : Diagnosis[]}) => {
   
   return (
-    <div className='flex flex-col md:flex-row gap-10 w-full'>
+    <div className='flex flex-col md:flex-row gap-10 w-full' data-testid="cards">
       <div className='bg-[#E0F3FA] p-5 rounded-md md:w-[33.3%]'>
         <Image 
         src={lung}
