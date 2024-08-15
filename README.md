@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Healthcare Dashboard
 
-## Getting Started
+This is my submission for coallition tech frontend test
 
-First, run the development server:
+## Description
+
+This project is a web application designed with one page: Dashboard Page. It leverages a postman API containing patients records. The application is mobile-responsive, ensuring a seamless user experience across different devices.
+
+## Table of Contents
+
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [API Details](#api-details)
+- [Testing](#testing)
+- [Links](#links)
+
+## Features
+
+1. **Dashboard**: A central hub that displays the patients records.
+2. **Patients Sidebar**: This section shows all the patients.
+3. **Patient Profile**: This section shows detailed information of the user.
+6. **Line Graph**: Line graph that shows the Blood pressure details of the user for 6 months.
+7. **Mobile Responsive**: Ensures optimal viewing and interaction across various devices, including mobile phones and tablets.
+
+## Technologies Used
+
+- HTML5
+- Shadcn
+- TypeScript
+- React.js 
+- Postman API 
+- Jest (for testing)
+
+## Installation
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/Kehinde13/healthcare_dashboard
+    cd lendSqr
+    ```
+
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
+
+3. Start the development server:
+    ```bash
+    npm start
+    ```
+
+
+
+## API Details
+
+The API contains 100 user records and can be accessed at `https://fedskillstest.coalitiontechnologies.workers.dev`. 
+
+
+### Example User Data
+```json
+{
+   age: 29,
+    date_of_birth: "12/08/1995",
+    emergency_contact: "(415) 325-5678",
+    gender: "male",
+    insurance_type: "kenny insurance",
+    lab_results: [],
+    name: "john",
+    phone_number: "(415) 555-5678",
+    profile_picture: "https://via.placeholder.com/150",
+    diagnosis_history: [],
+    diagnostic_list: [],
+  }
+  ```
+
+# Testing
+This project includes tests written with Jest to ensure the functionality and reliability of the application.
+
+## Running Tests
+To run the tests, use the following command:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm test
 ```
+## Test Coverage
+The tests cover various aspects of the application, including:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Component rendering
+- API calls and data handling
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Links
+- [Repository](https://github.com/Kehinde13/healthcare_dashboard)
+- [live site](https://healthcare-dashboard-orcin.vercel.app/)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
